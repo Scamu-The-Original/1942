@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Sky Ace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="ui">
+    <div class="top-bar">
+      <button id="btnPause" aria-label="Pausa">⏸</button>
+      <div id="score">000000</div>
+      <button id="btnSound" aria-label="Audio On/Off">🔊</button>
+    </div>
+    <canvas id="game" width="540" height="960"></canvas>
+    <div id="controls">
+      <div id="stickZone" class="touch-zone" aria-label="Joystick virtuale"></div>
+      <div id="fireZone" class="touch-zone" aria-label="Fuoco"></div>
+      <button id="btnAutoFire" class="pill">Auto-Fire</button>
+    </div>
+    <div id="overlay" class="hidden">
+      <div class="panel">
+        <h1>Sky Ace</h1>
+        <p>Scorri in verticale, evita i colpi, distruggi i nemici.<br>
+        Comandi: <strong>WASD / Frecce</strong> o <strong>Joystick virtuale</strong> — <strong>Spazio/Touch</strong> per sparare.<br>
+        Suggerimento: attiva <em>Auto-Fire</em> su mobile.</p>
+        <div class="row">
+          <button id="btnStart" class="primary">Gioca</button>
+          <button id="btnHow">Aiuto</button>
+        </div>
+      </div>
+    </div>
+    <div id="help" class="hidden">
+      <div class="panel">
+        <h2>Aiuto</h2>
+        <ul>
+          <li>Sposta l’aereo per evitare proiettili e collisioni.</li>
+          <li>Distruggi ondate e boss per aumentare il punteggio.</li>
+          <li>Raccogli power-up per aumentare la potenza di fuoco.</li>
+          <li>Su mobile: usa lo stick virtuale e il pulsante <em>Auto-Fire</em>.</li>
+        </ul>
+        <button id="btnBack">Indietro</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
